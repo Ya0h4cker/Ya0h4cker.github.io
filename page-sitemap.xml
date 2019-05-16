@@ -8,15 +8,22 @@
     </url>
     
     <url>
-        <loc>http://unforgiven99.github.io/tags/</loc>
-        <lastmod>2019-05-15T08:42:05.654Z</lastmod>
+        <loc>http://unforgiven99.github.io/schedule/</loc>
+        <lastmod>2019-05-16T10:33:43.358Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://unforgiven99.github.io/schedule/</loc>
-        <lastmod>2019-05-15T08:41:51.534Z</lastmod>
+        <loc>http://unforgiven99.github.io/about/</loc>
+        <lastmod>2019-05-16T10:33:24.436Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>http://unforgiven99.github.io/tags/</loc>
+        <lastmod>2019-05-16T10:32:00.647Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -31,13 +38,6 @@
     <url>
         <loc>http://unforgiven99.github.io/404/</loc>
         <lastmod>2019-05-15T08:40:50.320Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>http://unforgiven99.github.io/about/</loc>
-        <lastmod>2019-05-15T08:40:13.318Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
