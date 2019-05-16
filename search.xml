@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title><![CDATA[动态规划]]></title>
-    <url>%2F2019%2F05%2F16%2F%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%2F</url>
+    <url>%2F2019%2F05%2F16%2Fbp%2F</url>
     <content type="text"><![CDATA[简单来说，动态规划即记忆化搜索。 原理简介对于某些问题，进行穷竭搜索并不是最优解，某些节点会被多次计算，这导致时间、空间复杂度的增加。动态规划就是用来将这些结果记录下来，能大大降低复杂度的算法。要用动态规划解决问题必须先对问题的状态进行合理的假设，建立状态转移方程，确定边界。 实例讲解01背包问题有n个重量和价值分别为wi，vi的物品。从这些物品中挑选出总重量不超过W的物品，求所有挑选方案中价值总和的最大值。 这里，我们可以定义： $$ dp[i+1][j]：从0到i这i+1个物品中选出重量不超过j的物品时总价值的最大值 $$ 因此，两个状态的转移就有两种可能：选第i个物品；不选第i个物品。得到状态转移方程： $$dp[i+1][j] =\begin{cases}dp[i][j] &amp; (j&lt;w[i]) \\max(dp[i][j],dp[i][j-w[i]]+v[i]) &amp; (其他)\end{cases}$$ 实现代码如下： 12345678910111213141516171819202122232425#include &lt;cstdio&gt;#include &lt;algorithm&gt;using namespace std;#define MAX_N 100#define MAX_W 10000int dp[MAX_N + 1][MAX_W + 1];int main()&#123; int n,W; int w[MAX_N + 1],v[MAX_N + 1]; scanf("%d",&amp;n); for (int i = 0; i &lt; n; i++)&#123; scanf("%d %d",&amp;w[i],&amp;v[i]); &#125; scanf("%d",&amp;W); for (int i = 0; i &lt; n; i++)&#123; for (int j = 0; j &lt;= W; j++)&#123; if (j &lt; w[i]) dp[i + 1][j] = dp[i][j]; else dp[i + 1][j] = max(dp[i][j], dp[i][j - w[i]] + v[i]); &#125; &#125; printf("%d\n",dp[n][W]);&#125;]]></content>
       <categories>
         <category>dp</category>
