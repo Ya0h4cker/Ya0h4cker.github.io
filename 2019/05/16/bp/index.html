@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Unforgiven">
 <meta property="og:description" content="简单来说，动态规划即记忆化搜索。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-05-16T10:17:00.695Z">
+<meta property="og:updated_time" content="2019-05-17T04:56:39.517Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="动态规划">
 <meta name="twitter:description" content="简单来说，动态规划即记忆化搜索。">
@@ -467,12 +467,24 @@
                 
               
 
-              <time title="Created: 2019-05-16 17:33:18 / Modified: 18:17:00" itemprop="dateCreated datePublished" datetime="2019-05-16T17:33:18+08:00">2019-05-16</time>
+              <time title="Created: 2019-05-16 17:33:18" itemprop="dateCreated datePublished" datetime="2019-05-16T17:33:18+08:00">2019-05-16</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-05-17 12:56:39" itemprop="dateModified" datetime="2019-05-17T12:56:39+08:00">2019-05-17</time>
               
             
           </span>
@@ -538,7 +550,7 @@
                 
                   <span class="post-meta-item-text">Symbols count in article: </span>
                 
-                <span title="Symbols count in article">1k</span>
+                <span title="Symbols count in article">1.2k</span>
               
 
               
@@ -574,6 +586,17 @@
       
         <p>简单来说，动态规划即记忆化搜索。<br><a id="more"></a></p>
 <h2 id="原理简介"><a href="#原理简介" class="headerlink" title="原理简介"></a>原理简介</h2><p>对于某些问题，进行穷竭搜索并不是最优解，某些节点会被多次计算，这导致时间、空间复杂度的增加。动态规划就是用来将这些结果记录下来，能大大降低复杂度的算法。要用动态规划解决问题必须先对问题的状态进行合理的假设，建立状态转移方程，确定边界。</p>
+<p>一个问题是该用递推、贪心、搜索还是动态规划，完全是由这个问题本身阶段间状态的转移方式决定的！</p>
+<ul>
+<li><p>每个阶段只有一个状态-&gt;递推；</p>
+</li>
+<li><p>每个阶段的最优状态都是由上一个阶段的最优状态得到的-&gt;贪心；</p>
+</li>
+<li><p>每个阶段的最优状态是由之前所有阶段的状态的组合得到的-&gt;搜索；</p>
+</li>
+<li><p>每个阶段的最优状态可以从之前某个阶段的某个或某些状态直接得到而不管之前这个状态是如何得到的-&gt;动态规划。</p>
+</li>
+</ul>
 <h2 id="实例讲解"><a href="#实例讲解" class="headerlink" title="实例讲解"></a>实例讲解</h2><h3 id="01背包问题"><a href="#01背包问题" class="headerlink" title="01背包问题"></a>01背包问题</h3><p>有n个重量和价值分别为w<sub>i</sub>，v<sub>i</sub>的物品。从这些物品中挑选出总重量不超过W的物品，求所有挑选方案中价值总和的最大值。</p>
 <p>这里，我们可以定义：</p>
 <p>$$ dp[i+1][j]：从0到i这i+1个物品中选出重量不超过j的物品时总价值的最大值 $$</p>
