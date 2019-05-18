@@ -8,8 +8,16 @@
     </url>
 
     <url>
+        <loc>http://unforgiven99.github.io/2019/05/18/Disjoint-Set/</loc>
+        <lastmod>2019-05-18T08:21:31.023Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://unforgiven99.github.io/2019/05/17/DFS-BFS/</loc>
-        <lastmod>2019-05-17T08:30:01.937Z</lastmod>
+        <lastmod>2019-05-18T07:48:49.755Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -17,7 +25,7 @@
 
     <url>
         <loc>http://unforgiven99.github.io/2019/05/16/bp/</loc>
-        <lastmod>2019-05-17T07:10:47.343Z</lastmod>
+        <lastmod>2019-05-18T07:32:37.533Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
