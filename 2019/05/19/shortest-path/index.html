@@ -100,11 +100,11 @@
 <meta name="keywords" content="Bellman-Ford,Dijkstra,Floyd-Warshall">
 <meta property="og:type" content="article">
 <meta property="og:title" content="最短路问题">
-<meta property="og:url" content="http://unforgiven99.github.io/2019/05/19/shortest-path/index.html">
+<meta property="og:url" content="http://unforgiven99.github.io/2019/05/19/Shortest-Path/index.html">
 <meta property="og:site_name" content="Unforgiven">
 <meta property="og:description" content="本文主要介绍了最短路的几个算法：Bellman-Ford，Dijkstra，Floyd-Warshall以及个人理解。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-05-19T08:56:56.634Z">
+<meta property="og:updated_time" content="2019-05-19T09:00:28.652Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="最短路问题">
 <meta name="twitter:description" content="本文主要介绍了最短路的几个算法：Bellman-Ford，Dijkstra，Floyd-Warshall以及个人理解。">
@@ -117,7 +117,7 @@
 
   
   
-  <link rel="canonical" href="http://unforgiven99.github.io/2019/05/19/shortest-path/">
+  <link rel="canonical" href="http://unforgiven99.github.io/2019/05/19/Shortest-Path/">
 
 
 
@@ -424,7 +424,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://unforgiven99.github.io/2019/05/19/shortest-path/">
+    <link itemprop="mainEntityOfPage" href="http://unforgiven99.github.io/2019/05/19/Shortest-Path/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Unforgiven">
@@ -467,7 +467,7 @@
                 
               
 
-              <time title="Created: 2019-05-19 14:31:06 / Modified: 16:56:56" itemprop="dateCreated datePublished" datetime="2019-05-19T14:31:06+08:00">2019-05-19</time>
+              <time title="Created: 2019-05-19 14:31:06 / Modified: 17:00:28" itemprop="dateCreated datePublished" datetime="2019-05-19T14:31:06+08:00">2019-05-19</time>
             
 
             
@@ -508,8 +508,8 @@
                 </span>
             
                 <span class="post-meta-item-text">Comments: </span>
-                <a href="/2019/05/19/shortest-path/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/05/19/shortest-path/" itemprop="commentCount"></span>
+                <a href="/2019/05/19/Shortest-Path/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/05/19/Shortest-Path/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -589,8 +589,7 @@
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> d[MAX_V][MAX_V];</span><br><span class="line"><span class="keyword">int</span> V;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">warshall_floyd</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; V; k++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; V; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; V; j++) d[i][j] = min(d[i][j], d[i][k] + d[k][j]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="路径还原"><a href="#路径还原" class="headerlink" title="路径还原"></a>路径还原</h3><p>对于Bellman-Ford和Dijkstra算法，可以采用前趋节点来还原路径，d[j]=d[k]+cost[k][j]中，顶点k就是顶点j的前趋，用prev[j]记录最短路上顶点j的前趋，当路径更新时，更新prev[j]=k即可。</p>
 <p>实现代码如下：</p>
-<p><code>`</code> cpp<br>int prev[MAX_V];</p>
-<p>vector<int> get_patch(int t)<br>{<br>    vector<int> path;<br>    for (; t != -1; t = prev[t]) path.push_back(t);<br>    reverse(path.begin(), path.end());<br>    return path;<br>}</int></int></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> prev[MAX_V];</span><br><span class="line"></span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; get_patch(<span class="keyword">int</span> t)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; path;</span><br><span class="line">    <span class="keyword">for</span> (; t != <span class="number">-1</span>; t = prev[t]) path.push_back(t);</span><br><span class="line">    reverse(path.begin(), path.end());</span><br><span class="line">    <span class="keyword">return</span> path;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>对于Floyd-Warshall算法，可以用path[i][j]记录i到j路径上经过的最后一个点，当路径更新时，更新path[i][j]=path[i][k]即可。</p>
 
       
@@ -626,7 +625,7 @@
   <li class="post-copyright-link">
     <strong>Post link: </strong>
     
-    <a href="http://unforgiven99.github.io/2019/05/19/shortest-path/" title="最短路问题">http://unforgiven99.github.io/2019/05/19/shortest-path/</a>
+    <a href="http://unforgiven99.github.io/2019/05/19/Shortest-Path/" title="最短路问题">http://unforgiven99.github.io/2019/05/19/Shortest-Path/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.</li>
@@ -762,6 +761,8 @@
                     
                       
                     
+                      
+                    
                     <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
@@ -778,6 +779,8 @@
                     
                   
                     
+                    
+                      
                     
                       
                     

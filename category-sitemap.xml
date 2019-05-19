@@ -8,8 +8,15 @@
     </url>
 
     <url>
+        <loc>http://unforgiven99.github.io/categories/DP/</loc>
+        <lastmod>2019-05-19T09:00:41.636Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>http://unforgiven99.github.io/categories/%E6%9C%80%E7%9F%AD%E8%B7%AF/</loc>
-        <lastmod>2019-05-19T08:56:56.634Z</lastmod>
+        <lastmod>2019-05-19T09:00:28.652Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -24,13 +31,6 @@
     <url>
         <loc>http://unforgiven99.github.io/categories/DFS-BFS/</loc>
         <lastmod>2019-05-18T07:48:49.755Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://unforgiven99.github.io/categories/dp/</loc>
-        <lastmod>2019-05-18T07:32:37.533Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
