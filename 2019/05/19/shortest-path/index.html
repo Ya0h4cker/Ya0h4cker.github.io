@@ -96,17 +96,18 @@
 
 
 
-  <meta name="description" content="Never give up">
-<meta property="og:type" content="website">
-<meta property="og:title" content="schedule">
-<meta property="og:url" content="http://unforgiven99.github.io/schedule/index.html">
+  <meta name="description" content="本文主要介绍了最短路的几个算法：Bellman-Ford，Dijkstra，Floyd-Warshall以及个人理解。">
+<meta name="keywords" content="Bellman-Ford,Dijkstra,Floyd-Warshall">
+<meta property="og:type" content="article">
+<meta property="og:title" content="最短路问题">
+<meta property="og:url" content="http://unforgiven99.github.io/2019/05/19/shortest-path/index.html">
 <meta property="og:site_name" content="Unforgiven">
-<meta property="og:description" content="Never give up">
+<meta property="og:description" content="本文主要介绍了最短路的几个算法：Bellman-Ford，Dijkstra，Floyd-Warshall以及个人理解。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-05-16T10:33:43.358Z">
+<meta property="og:updated_time" content="2019-05-19T08:56:56.634Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="schedule">
-<meta name="twitter:description" content="Never give up">
+<meta name="twitter:title" content="最短路问题">
+<meta name="twitter:description" content="本文主要介绍了最短路的几个算法：Bellman-Ford，Dijkstra，Floyd-Warshall以及个人理解。">
 
 
 
@@ -116,7 +117,7 @@
 
   
   
-  <link rel="canonical" href="http://unforgiven99.github.io/schedule/">
+  <link rel="canonical" href="http://unforgiven99.github.io/2019/05/19/shortest-path/">
 
 
 
@@ -126,7 +127,7 @@
   };
 </script>
 
-  <title>schedule | Unforgiven</title>
+  <title>最短路问题 | Unforgiven</title>
   
 
 
@@ -298,7 +299,7 @@
         
         
           
-          <li class="menu-item menu-item-schedule menu-item-active">
+          <li class="menu-item menu-item-schedule">
 
     
     
@@ -362,37 +363,6 @@
   
     
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
   
 
   
@@ -440,64 +410,289 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://unforgiven99.github.io/2019/05/19/shortest-path/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Unforgiven">
+      <meta itemprop="description" content="Never give up">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Unforgiven">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">schedule
-
-</h1>
-
-<div class="post-meta">
-  
-  
-
-
-
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
+          <h1 class="post-title" itemprop="name headline">最短路问题
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-05-19 14:31:06 / Modified: 16:56:56" itemprop="dateCreated datePublished" datetime="2019-05-19T14:31:06+08:00">2019-05-19</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
           
-  
-  
-  
-  <div class="post-block schedule">
-    <div id="schedule">
-      <ul id="event-list">
-      </ul>
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/最短路/" itemprop="url" rel="index"><span itemprop="name">最短路</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">Comments: </span>
+                <a href="/2019/05/19/shortest-path/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/05/19/shortest-path/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             Views:  
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Symbols count in article: </span>
+                
+                <span title="Symbols count in article">3k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">3 mins.</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>本文主要介绍了最短路的几个算法：Bellman-Ford，Dijkstra，Floyd-Warshall以及个人理解。<br><a id="more"></a></p>
+<h2 id="原理简介"><a href="#原理简介" class="headerlink" title="原理简介"></a>原理简介</h2><h3 id="Bellman-Ford算法"><a href="#Bellman-Ford算法" class="headerlink" title="Bellman-Ford算法"></a>Bellman-Ford算法</h3><p>Bellman-Ford算法是求单源最短路的算法，基本原理是通过<strong>遍历边</strong>来对路径进行松弛操作，松弛操作的原理：</p>
+<p>记从起点s出发到顶点i的最短距离为d[i]，则下列等式成立：</p>
+<p>$$ d[i] = min{d[j]+(从i到j的边的权值)|e=(j,i)\in E} $$</p>
+<p>实现代码如下：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">edge</span> &#123;</span></span><br><span class="line">    <span class="keyword">int</span> from, to, cost;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">edge es[MAX_E];</span><br><span class="line"><span class="keyword">int</span> d[MAX_V];</span><br><span class="line"><span class="keyword">int</span> V, E;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">shortest_path</span><span class="params">(<span class="keyword">int</span> s)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; V; i++) d[i] = INF;</span><br><span class="line">    d[s] = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">        <span class="keyword">bool</span> update = <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; E; i++) &#123;</span><br><span class="line">            edge e = es[i];</span><br><span class="line">            <span class="keyword">if</span> (d[e.from] != INF &amp;&amp; d[e.to] &gt; d[e.from] + e.cost ) &#123;</span><br><span class="line">                d[e.to] = d[e.from] + e.cost;</span><br><span class="line">                update = <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (!update) <span class="keyword">break</span>;</span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果图中存在负圈，则最短路不存在；如果图中不存在从s可达的负圈，那么最短路不会经过同一顶点两次，最短路最多只经过V个顶点，最多通过V-1条边，while循环最多执行V-1次。基于这个性质，我们可以检查图中是否存在负圈。</p>
+<p>实现代码如下：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">find_negative_loop</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">memset</span>(d, <span class="number">0</span>, <span class="keyword">sizeof</span>(d));</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; V; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; E; j++) &#123;</span><br><span class="line">            edge e = es[j];</span><br><span class="line">            <span class="keyword">if</span> (d[e.to] &gt; d[e.from] + e.cost ) &#123;</span><br><span class="line">                d[e.to] = d[e.from] + e.cost;</span><br><span class="line">                <span class="keyword">if</span> (i == V - <span class="number">1</span>) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Dijkstra算法"><a href="#Dijkstra算法" class="headerlink" title="Dijkstra算法"></a>Dijkstra算法</h3><p>Dijkstra算法也是一种单源最短路算法，但它只适用于没有负边的图。其基本原理是<strong>遍历点</strong>，先找到最短距离已知的顶点，从该点出发，更新相邻顶点的最短距离，之后不需要再考虑这个最短距离已知的顶点。而最短距离已知的顶点是在未使用过的顶点中距离最小的顶点，这是因为不存在负边，距离不会在之后的更新中变小。</p>
+<p>实现代码如下：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; P;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">edge</span> &#123;</span></span><br><span class="line">    <span class="keyword">int</span> to, cost;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> V;</span><br><span class="line"><span class="built_in">vector</span>&lt;edge&gt; G[MAX_V];</span><br><span class="line"><span class="keyword">int</span> d[MAX_V];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dijkstra</span><span class="params">(<span class="keyword">int</span> s)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    priority_queue&lt;P, <span class="built_in">vector</span>&lt;P&gt;, greater&lt;P&gt; &gt; que;</span><br><span class="line">    fill(d, d + V, INF);</span><br><span class="line">    d[s] = <span class="number">0</span>;</span><br><span class="line">    que.push(P(<span class="number">0</span>, s));</span><br><span class="line">    <span class="keyword">while</span>(!que.empty()) &#123;</span><br><span class="line">        P p = que.top();</span><br><span class="line">        que.pop();</span><br><span class="line">        <span class="keyword">int</span> v = p.second();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; G[v].size(); i++) &#123;</span><br><span class="line">            edge e = G[v][i];</span><br><span class="line">            <span class="keyword">if</span> (d[e.to] &gt; d[v] + e.cost) &#123;</span><br><span class="line">                d[e.to] = d[v] + e.cost;</span><br><span class="line">                que.push(P(d[e.to], e.to));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Floyd-Warshall算法"><a href="#Floyd-Warshall算法" class="headerlink" title="Floyd-Warshall算法"></a>Floyd-Warshall算法</h3><p>这是求解任意两点间最短路问题的算法。我们考虑计算顶点i到j的最短路径，记i到j且经过顶点0~k的最短路的长度为d[k+1][i][j],利用DP的思想，我们需要找到一个状态转移方程：该路径可分为经过一次k顶点和不经过两种情况。当不经过顶点k，d[k+1][i][j]=d[k][i][j]；经过顶点k时，d[k+1][i][j]=d[k][i][k]+d[k][k][j]。所以，d[k+1][i][j]=min(d[k][i][j]，d[k][i][k]+d[k][k][j])，可以简化成d[i][j]=min(d[i][j]，d[i][k]+d[k][j])。</p>
+<p>实现代码如下：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> d[MAX_V][MAX_V];</span><br><span class="line"><span class="keyword">int</span> V;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">warshall_floyd</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; V; k++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; V; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; V; j++) d[i][j] = min(d[i][j], d[i][k] + d[k][j]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="路径还原"><a href="#路径还原" class="headerlink" title="路径还原"></a>路径还原</h3><p>对于Bellman-Ford和Dijkstra算法，可以采用前趋节点来还原路径，d[j]=d[k]+cost[k][j]中，顶点k就是顶点j的前趋，用prev[j]记录最短路上顶点j的前趋，当路径更新时，更新prev[j]=k即可。</p>
+<p>实现代码如下：</p>
+<p><code>`</code> cpp<br>int prev[MAX_V];</p>
+<p>vector<int> get_patch(int t)<br>{<br>    vector<int> path;<br>    for (; t != -1; t = prev[t]) path.push_back(t);<br>    reverse(path.begin(), path.end());<br>    return path;<br>}</int></int></p>
+<p>对于Floyd-Warshall算法，可以用path[i][j]记录i到j路径上经过的最后一个点，当路径更新时，更新path[i][j]=path[i][k]即可。</p>
+
+      
     </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+      <div>
+        
+
+
+
+
+  
+
+
+
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:  </strong>Unforgiven</li>
+  <li class="post-copyright-link">
+    <strong>Post link: </strong>
+    
+    <a href="http://unforgiven99.github.io/2019/05/19/shortest-path/" title="最短路问题">http://unforgiven99.github.io/2019/05/19/shortest-path/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Bellman-Ford/" rel="tag"><i class="fa fa-tag"></i># Bellman-Ford</a>
+          
+            <a href="/tags/Dijkstra/" rel="tag"><i class="fa fa-tag"></i># Dijkstra</a>
+          
+            <a href="/tags/Floyd-Warshall/" rel="tag"><i class="fa fa-tag"></i># Floyd-Warshall</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/18/Disjoint-Set/" rel="next" title="并查集">
+                <i class="fa fa-chevron-left"></i> 并查集
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
 
-        
-      </div>
-      
-      
-      
-    </div>
-    
-
-
-
-    
-    
-    
   </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
 
         </div>
         
@@ -517,8 +712,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -649,6 +853,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#原理简介"><span class="nav-number">1.</span> <span class="nav-text">原理简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Bellman-Ford算法"><span class="nav-number">1.1.</span> <span class="nav-text">Bellman-Ford算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Dijkstra算法"><span class="nav-number">1.2.</span> <span class="nav-text">Dijkstra算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Floyd-Warshall算法"><span class="nav-number">1.3.</span> <span class="nav-text">Floyd-Warshall算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#路径还原"><span class="nav-number">1.4.</span> <span class="nav-text">路径还原</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -863,6 +1084,8 @@
 
 
 
+
+  
 
 
   
@@ -1200,6 +1423,46 @@
   
   
 
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
+        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
+      }
+    });
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
+    }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
   
 
 
