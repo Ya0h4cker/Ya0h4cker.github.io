@@ -8,8 +8,24 @@
     </url>
 
     <url>
+        <loc>http://unforgiven99.github.io/2019/06/17/State-Compression-DP%26Fast-Power-Of-Matrix&Segment-Tree-Optimization-DP/</loc>
+        <lastmod>2019-06-17T13:18:12.533Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://unforgiven99.github.io/2019/05/21/Segment-Tree/</loc>
+        <lastmod>2019-06-17T12:20:25.629Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://unforgiven99.github.io/2019/05/24/Bucket-Method%26Sqrt-Decomposition/</loc>
-        <lastmod>2019-05-26T12:42:31.144Z</lastmod>
+        <lastmod>2019-05-26T12:44:17.100Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -18,14 +34,6 @@
     <url>
         <loc>http://unforgiven99.github.io/2019/05/23/Binary-Indexed-Tree/</loc>
         <lastmod>2019-05-23T12:51:42.214Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://unforgiven99.github.io/2019/05/21/Segment-Tree/</loc>
-        <lastmod>2019-05-23T08:41:08.742Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
