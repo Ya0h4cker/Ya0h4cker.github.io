@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Unforgiven">
 <meta property="og:description" content="本文主要是对动态规划更深入的介绍，包括状态压缩、优化等，以及矩阵快速幂的讲解。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-06-17T13:27:04.452Z">
+<meta property="og:updated_time" content="2019-06-17T13:31:34.318Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="状态压缩DP、矩阵快速幂以及线段树优化DP">
 <meta name="twitter:description" content="本文主要是对动态规划更深入的介绍，包括状态压缩、优化等，以及矩阵快速幂的讲解。">
@@ -467,7 +467,7 @@
                 
               
 
-              <time title="Created: 2019-06-17 16:39:04 / Modified: 21:27:04" itemprop="dateCreated datePublished" datetime="2019-06-17T16:39:04+08:00">2019-06-17</time>
+              <time title="Created: 2019-06-17 16:39:04 / Modified: 21:31:34" itemprop="dateCreated datePublished" datetime="2019-06-17T16:39:04+08:00">2019-06-17</time>
             
 
             
@@ -582,7 +582,7 @@
 <p>有些情况下，使用数据结构优化动态规划，可以使动态规划更高效，比如动态规划中有时会查询区间的最值来更新dp数组，此时可以用线段树或者树状数组来进行优化。</p>
 <h2 id="实例讲解"><a href="#实例讲解" class="headerlink" title="实例讲解"></a>实例讲解</h2><h3 id="旅行商问题"><a href="#旅行商问题" class="headerlink" title="旅行商问题"></a>旅行商问题</h3><p>给定一个n个顶点组成的带权有向图的距离矩阵d(I,j)（INF表示没有边）。要求从顶点0出发，经过每个顶点恰好一次后再回到顶点0。问所经过的边的总权重的最小值是多少？</p>
 <p>尝试每一种情况是不现实的，我们可以采用DP来解决，假设现在已经访问过的点的集合（起点0当作还未访问过的点）为S，当前所在的顶点为v，dp[S][v]表示从v出发访问剩余的所有顶点，最终回到顶点0的路径的权重总和的最小值，可以得到递推式如下：</p>
-<p>$$ dp[V][0]=0 $$<br>$$ dp[S][v]=min{dp[S\cup {u}][u]+d(v,u)|u\notin \cup S} $$</p>
+<p>$$ dp[V][0]=0 $$<br>$$ dp[S][v]=min\begin{Bmatrix}<br>dp[S\cup {u}][u]+d(v,u)|u\notin S<br>\end{Bmatrix} $$</p>
 <p>然后将S二进制编码成整数即可。</p>
 <p>伪代码如下：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="keyword">int</span> d[MAX_N][MAX_N];</span><br><span class="line"><span class="keyword">int</span> dp[<span class="number">1</span> &lt;&lt; MAX_N][MAX_N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> S = <span class="number">0</span>; S &lt; <span class="number">1</span> &lt;&lt; n; S++) fill(dp[S], dp[S] + n, INF);</span><br><span class="line">    dp[(<span class="number">1</span> &lt;&lt; n) - <span class="number">1</span>][<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> S = (<span class="number">1</span> &lt;&lt; n) - <span class="number">2</span>; S &gt;= <span class="number">0</span>; S--) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> v = <span class="number">0</span>; v &lt; n; v++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> u = <span class="number">0</span>; u &lt; n; u++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (!(S &gt;&gt; u &amp; <span class="number">1</span>)) dp[S][v] = min(dp[S][v], dp[S | <span class="number">1</span> &gt;&gt; u][u] + d[v][u]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, dp[<span class="number">0</span>][<span class="number">0</span>]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
