@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Unforgiven">
 <meta property="og:description" content="本文简单讲解了网络流中最大流问题和最小割问题的基本原理以及代码实现。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-06-19T10:01:07.958Z">
+<meta property="og:updated_time" content="2019-06-19T10:06:35.283Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="最大流和最小割">
 <meta name="twitter:description" content="本文简单讲解了网络流中最大流问题和最小割问题的基本原理以及代码实现。">
@@ -484,7 +484,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-06-19 18:01:07" itemprop="dateModified" datetime="2019-06-19T18:01:07+08:00">2019-06-19</time>
+                <time title="Modified: 2019-06-19 18:06:35" itemprop="dateModified" datetime="2019-06-19T18:06:35+08:00">2019-06-19</time>
               
             
           </span>
@@ -550,7 +550,7 @@
                 
                   <span class="post-meta-item-text">Symbols count in article: </span>
                 
-                <span title="Symbols count in article">5.9k</span>
+                <span title="Symbols count in article">6k</span>
               
 
               
@@ -606,13 +606,13 @@
 <h3 id="无向图"><a href="#无向图" class="headerlink" title="无向图"></a>无向图</h3><p>无向图中流量表示的是两个方向流量之和的上界。但如果两个方向都有流量，则可相互抵消，所以最大流中没必要两个方向均有流量。因此把无向图中容量为c的一条边当作有向图中两个方向各有一条容量为c的两条边即可。</p>
 <h3 id="顶点上有容量限制"><a href="#顶点上有容量限制" class="headerlink" title="顶点上有容量限制"></a>顶点上有容量限制</h3><p>可以把每个顶点拆成两个。拆点后得到入顶点和出顶点，将指向原先顶点的边改成指向入顶点，将从原先顶点指出的边改成从出顶点指出。并且从入顶点向出顶点连容量为原先顶点容量的边即可。</p>
 <h3 id="有最小流量限制"><a href="#有最小流量限制" class="headerlink" title="有最小流量限制"></a>有最小流量限制</h3><p>假设最小流量限制为b(e)，令$f^{‘}(e)=f(e)-b(e)$，就可以转化为只有最大流量限制的情况$0\leq f^{‘}(e)\leq c(e)-b(e)$的情况，此时顶点对应的总流入量与总流出量的关系变为</p>
-<p>$$ \sum_{e\in \delta <em>{-}(v)}^{}f^{‘}(e)+b(e)=\sum</em>{e\in \delta _{+}(v)}^{}f^{‘}(e)+b(e) $$</p>
+<p>$$ \sum_{e\in \delta _{-}(v)}^{}f^{‘}(e)+b(e)=\sum_{e\in \delta _{+}(v)}^{}f^{‘}(e)+b(e) $$</p>
 <p>这可以看作是有一个最大流出量为$\sum_{e\in \delta <em>{-}(v)}^{}b(e)$的源点和一个最大流出量为$\sum</em>{e\in \delta <em>{+}(v)}^{}b(e)$的汇点与之相连。于是，可以增加新的源点S和汇点T，对于每条边e=(u,v)，令$c^{‘}(e)=c(e)-b(e)$，并从S向v连一条容量为b(e)的边，从u向T连一条容量为b(e)的边，此时求解S到T的最大流，若为$\sum</em>{e\in E}^{}b(e)$，则说明有可行解，再从S向s连一条容量无穷大的边，从t向T连一条容量无穷大的边，求解S到T的最大流为$F^{‘}$，那么原图的最大流为$F^{‘}-\sum_{e\in E}^{}b(e)$。</p>
 <h3 id="图发生部分变化"><a href="#图发生部分变化" class="headerlink" title="图发生部分变化"></a>图发生部分变化</h3><p>在某些问题中，求完某个图的最大流后，需要对原图的一部分做一些变化，再对新图求最大流，有时不需要重新求解，可以重复利用前一步的结果。</p>
 <p>首先考虑边的容量增加的情况，只要在原图的最大流的基础上，不断寻找增广路增广即可。</p>
 <p>考虑边的容量减少1的情况。如果原图的最大流中，有$f(e)\leq c(e)-1$的话，那么它也是新图的最大流。否则，如果f(e)=c(e)，需要将多出部分的流退回去。假如原图最大流f的残余网络中存在u到v的路径，那么可以沿着这条路径增广1并把f(e)减小1，而保持最大流不变。否则，需要找$t\rightarrow v$和$u\rightarrow s$的路径，沿它们增广1并把f(e)减小1，最大流也减小1。在求字典序最小的最大流问题中会用到这种技巧。</p>
 <p>最后是最小割问题。所谓图的割，指的是对于某个顶点集合$S\subseteq V$，从S出发指向S外部的那些边的集合，记为割(S,V\S)。这些边的容量之和称为割的容量。最小割问题就是求对于给定网络，为了保证没有从源点到汇点的路径，需要删去的边的总容量的最小值。</p>
-<p>记通过Ford-Fulkerson算法求得的流为$f^{‘}$，该流对应的残余网络中从元源点s可达的顶点v组成的集合为S，因为$f^{‘}$对应的残余网络中不存在s-t路径，所以(S,V\S)就是一个s-t割，S的出边e应该满足$f^{‘}=c(e)$，入边e应满足$f^{‘}=0$，因为若不为0，则其反向边可形成s-t路径，矛盾。因此，($f^{‘}$的流量)=(S的出边的总流量)-(S的入边的总流量)=(割的容量)-0，$f^{‘}$即为最大流。这就是最大流最小割定理，最大流等于最小割。</p>
+<p>记通过Ford-Fulkerson算法求得的流为$f^{‘}$，该流对应的残余网络中从元源点s可达的顶点v组成的集合为S，因为$f^{‘}$对应的残余网络中不存在s-t路径，所以(S,V\S)就是一个s-t割，S的出边e应该满足$f^{‘}(e)=c(e)$，入边e应满足$f^{‘}(e)=0$，因为若不为0，则其反向边可形成s-t路径，矛盾。因此，($f^{‘}$的流量)=(S的出边的总流量)-(S的入边的总流量)=(割的容量)-0，$f^{‘}$即为最大流。这就是最大流最小割定理，最大流等于最小割。</p>
 <h2 id="实例讲解"><a href="#实例讲解" class="headerlink" title="实例讲解"></a>实例讲解</h2><h3 id="Dining（POJ-3281）"><a href="#Dining（POJ-3281）" class="headerlink" title="Dining（POJ 3281）"></a>Dining（POJ 3281）</h3><p>Description</p>
 <p>Cows are such finicky eaters. Each cow has a preference for certain foods and drinks, and she will consume no others.<br>Farmer John has cooked fabulous meals for his cows, but he forgot to check his menu against their preferences. Although he might not be able to stuff everybody, he wants to give a complete meal of both food and drink to as many cows as possible.<br>Farmer John has cooked F (1 ≤ F ≤ 100) types of foods and prepared D (1 ≤ D ≤ 100) types of drinks. Each of his N (1 ≤ N ≤ 100) cows has decided whether she is willing to eat a particular food or drink<br> a particular drink. Farmer John must assign a food type and a drink type to each cow to maximize the number of cows who get both.<br>Each dish or drink can only be consumed by one cow (i.e., once food type 2 is assigned to a cow, no other cow can be assigned food type 2).</p>
 <p>Input</p>
