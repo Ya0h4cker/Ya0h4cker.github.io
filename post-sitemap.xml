@@ -8,8 +8,16 @@
     </url>
 
     <url>
+        <loc>http://unforgiven99.github.io/2019/06/18/Maximum-Flow%26Minimum-Cut/</loc>
+        <lastmod>2019-06-19T10:01:07.958Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://unforgiven99.github.io/2019/06/17/State-Compression-DP%26Fast-Power-Of-Matrix&Segment-Tree-Optimization-DP/</loc>
-        <lastmod>2019-06-17T13:50:48.785Z</lastmod>
+        <lastmod>2019-06-17T13:51:57.940Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
